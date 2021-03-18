@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:olakino/UserProfile.dart';
+import 'package:olakino/HealthyRecipes.dart';
 
 
 class GameClass extends StatefulWidget{
@@ -13,7 +14,6 @@ class _GameState extends State<GameClass> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.keyboard_arrow_right),
         title: Text('Olakino'),
       ),
 
@@ -62,18 +62,12 @@ class _GameState extends State<GameClass> {
               */
                   onTap: () {
                     Navigator.pop(context);
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => HealthyRecipes())));
-
-
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => HealthyRecipes()));
                   }
               )
-
-
             ],
-
           )
       ),
-
     );
   }
 }

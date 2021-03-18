@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:olakino/HealthyRecipes.dart';
+import 'HealthyRecipes.dart';
+import 'ExerciseList.dart';
 import 'UserProfile.dart';
 import 'GameClass.dart';
 
@@ -79,7 +80,6 @@ with SingleTickerProviderStateMixin{
    return new Scaffold(
      // App bar is the top most bar of the app
      appBar: AppBar(
-       leading: Icon(Icons.keyboard_arrow_right),
        title: Text('Olakino'),
      ),
     // This is the menu drawer
@@ -136,6 +136,19 @@ with SingleTickerProviderStateMixin{
 
 
               },
+           ),
+
+           ListTile(
+             leading: Text('Exercises'),
+
+             /*
+               This function handles linking the button to the class which contains
+               the page
+              */
+             onTap: () {
+               Navigator.pop(context);
+               Navigator.push(context, MaterialPageRoute(builder: (context) => ExerciseList()));
+             },
            ),
 
            // Game aspect
