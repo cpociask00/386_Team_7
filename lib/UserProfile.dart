@@ -16,7 +16,7 @@ class _ProfileState extends State<Profile> {
         leading: Icon(Icons.keyboard_arrow_right),
         title: Text('Olakino'),
       ),
-
+      //this section creates a header for each profile
       drawer: Drawer(
           child: ListView(
             padding: EdgeInsets.zero,
