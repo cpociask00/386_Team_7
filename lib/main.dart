@@ -5,6 +5,7 @@ import 'UserProfile.dart';
 import 'GameClass.dart';
 
 void main() {
+  // This is the main function for the Olakino app
   runApp(MyApp());
 }
 
