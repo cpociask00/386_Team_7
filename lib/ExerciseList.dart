@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'HealthyRecipes.dart';
 import 'UserProfile.dart';
 import 'GameClass.dart';
+import 'main.dart';
 import 'dart:async';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:io';
@@ -122,6 +123,15 @@ class _ExercisesState extends State<ExerciseList> {
               Profile ListTile
             */
               ListTile(
+                  leading: Text('Home'),
+                  trailing:Icon(Icons.home),
+
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+                  }
+              ),
+              ListTile(
                   leading: Text('User Profile'),
                   trailing: Icon(Icons.account_circle),
                   /*
@@ -149,6 +159,33 @@ class _ExercisesState extends State<ExerciseList> {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => (HealthyRecipes())));
 
 
+                  }
+              ),
+
+              ListTile(
+                leading: Text('Exercises'),
+                trailing: Icon(Icons.fitness_center),
+                /*
+               This function handles linking the button to the class which contains
+               the page
+              */
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ExerciseList()));
+                },
+              ),
+
+              ListTile(
+                  leading: Text('Exercise RPG'),
+                  trailing: Icon(Icons.videogame_asset),
+
+                  /*
+                This function handles linking the button to the class which
+                 contains the page
+              */
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context,MaterialPageRoute(builder: (context) => GameClass()));
                   }
               )
 

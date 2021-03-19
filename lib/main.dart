@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'HealthyRecipes.dart';
 import 'ExerciseList.dart';
+import 'HealthyRecipes.dart';
 import 'UserProfile.dart';
 import 'GameClass.dart';
 
@@ -67,10 +68,7 @@ with SingleTickerProviderStateMixin{
 
     super.initState();
     tabController = new TabController(length: 4, vsync: this);
-
     //TODO: Implement landing page
-
-
   }
 
   @override
@@ -96,8 +94,8 @@ with SingleTickerProviderStateMixin{
              ),),
              decoration: BoxDecoration(
                image: DecorationImage(
-                 image: AssetImage('https://i.ytimg.com/vi/bKrym5zuOag/maxresdefault.jpg'),
-                 fit: BoxFit.cover
+                 image: NetworkImage('https://i.ytimg.com/vi/bKrym5zuOag/maxresdefault.jpg'),
+                 fit: BoxFit.contain
                )
              ),
            ),
@@ -105,6 +103,21 @@ with SingleTickerProviderStateMixin{
            /*
               Profile ListTile
             */
+           ListTile(
+               leading: Text('Home'),
+               trailing: Icon(Icons.home),
+               /*
+                 This function handles linking the button to the class which contains the
+                 page
+                */
+               onTap: () {
+                 // this clears the page so it can be changed to another
+                 Navigator.pop(context);
+                 // this pushes the content of a particular page, in this case the Profile class
+                 Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+               }
+           ),
+
            ListTile(
              leading: Text('User Profile'),
              trailing: Icon(Icons.account_circle),
@@ -117,9 +130,7 @@ with SingleTickerProviderStateMixin{
                  Navigator.pop(context);
                  // this pushes the content of a particular page, in this case the Profile class
                  Navigator.push(context, MaterialPageRoute(builder: (context) => Profile()));
-
              }
-
            ),
            // recipes
            ListTile(
@@ -140,7 +151,7 @@ with SingleTickerProviderStateMixin{
 
            ListTile(
              leading: Text('Exercises'),
-
+             trailing: Icon(Icons.fitness_center),
              /*
                This function handles linking the button to the class which contains
                the page

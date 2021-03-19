@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:olakino/UserProfile.dart';
 import 'package:olakino/HealthyRecipes.dart';
+import 'main.dart';
+import 'package:olakino/ExerciseList.dart';
 
 
 class GameClass extends StatefulWidget{
@@ -38,6 +40,15 @@ class _GameState extends State<GameClass> {
               Profile ListTile
             */
               ListTile(
+                  leading: Text('Home'),
+                  trailing:Icon(Icons.home),
+
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+                  }
+              ),
+              ListTile(
                   leading: Text('User Profile'),
                   trailing: Icon(Icons.account_circle),
                   /*
@@ -62,7 +73,36 @@ class _GameState extends State<GameClass> {
               */
                   onTap: () {
                     Navigator.pop(context);
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => HealthyRecipes()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => (HealthyRecipes())));
+
+
+                  }
+              ),
+
+              ListTile(
+                leading: Text('Exercises'),
+                trailing: Icon(Icons.fitness_center),
+                /*
+               This function handles linking the button to the class which contains
+               the page
+              */
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ExerciseList()));
+                },
+              ),
+
+              ListTile(
+                  leading: Text('Exercise RPG'),
+                  trailing: Icon(Icons.videogame_asset),
+
+                  /*
+                This function handles linking the button to the class which
+                 contains the page
+              */
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context,MaterialPageRoute(builder: (context) => GameClass()));
                   }
               )
             ],
