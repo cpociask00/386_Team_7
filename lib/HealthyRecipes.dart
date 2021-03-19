@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'ExerciseList.dart';
+import 'UserProfile.dart';
+import 'GameClass.dart';
+import 'main.dart';
 
 class HealthyRecipes extends StatefulWidget{
   @override
@@ -12,7 +15,6 @@ class _RecipesState extends State<HealthyRecipes> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.keyboard_arrow_right),
         title: Text('Olakino'),
       ),
 
@@ -37,6 +39,15 @@ class _RecipesState extends State<HealthyRecipes> {
               Profile ListTile
             */
               ListTile(
+                  leading: Text('Home'),
+                  trailing:Icon(Icons.home),
+
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+                  }
+              ),
+              ListTile(
                   leading: Text('User Profile'),
                   trailing: Icon(Icons.account_circle),
                   /*
@@ -45,7 +56,7 @@ class _RecipesState extends State<HealthyRecipes> {
                 */
                   onTap: () {
                     Navigator.pop(context);
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => HealthyRecipes()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Profile()));
 
                   }
 
@@ -64,6 +75,33 @@ class _RecipesState extends State<HealthyRecipes> {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => (HealthyRecipes())));
 
 
+                  }
+              ),
+
+              ListTile(
+                leading: Text('Exercises'),
+                trailing: Icon(Icons.fitness_center),
+                /*
+               This function handles linking the button to the class which contains
+               the page
+              */
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ExerciseList()));
+                },
+              ),
+
+              ListTile(
+                  leading: Text('Exercise RPG'),
+                  trailing: Icon(Icons.videogame_asset),
+
+                  /*
+                This function handles linking the button to the class which
+                 contains the page
+              */
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context,MaterialPageRoute(builder: (context) => GameClass()));
                   }
               )
 
