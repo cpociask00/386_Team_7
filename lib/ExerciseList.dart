@@ -6,6 +6,7 @@ import 'main.dart';
 import 'dart:async';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:io';
+import 'About.dart';
 
 /// Basic enumeration for difficulty type, could be changed to open ended string
 enum Difficulty { easy, medium, hard }
@@ -196,6 +197,7 @@ class _ExercisesState extends State<ExerciseList> {
                 This function handles linking the button to the class which
                  contains the page
               */
+
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(context,
@@ -203,6 +205,21 @@ class _ExercisesState extends State<ExerciseList> {
               })
         ],
       )),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context,MaterialPageRoute(builder: (context) => GameClass()));
+                  }
+              ),
+
+
+
+
+            ],
+
+          )
+      ),
+
+
     );
   }
 }
