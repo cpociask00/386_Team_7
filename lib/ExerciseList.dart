@@ -6,6 +6,7 @@ import 'main.dart';
 import 'dart:async';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:io';
+import 'About.dart';
 
 
 /// Basic enumeration for difficulty type, could be changed to open ended string
@@ -187,7 +188,10 @@ class _ExercisesState extends State<ExerciseList> {
                     Navigator.pop(context);
                     Navigator.push(context,MaterialPageRoute(builder: (context) => GameClass()));
                   }
-              )
+              ),
+
+
+
 
             ],
 
