@@ -10,32 +10,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 Anyone who wishes to contribute to the continuation of the app will need to have installed Android Studio or similar IDE that supports plugins, Flutter and Dart plugins.
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Flutter](https://flutter.dev/) - The app development environment used
+* [Flutter](https://flutter.dev/) - The software development kit used
 * [Dart](https://maven.apache.org/) - The main programming language used
+* [Android Studio](https://developer.android.com/studio) - The development environment used
 
 ## Contributing
 
