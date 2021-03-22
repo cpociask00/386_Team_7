@@ -12,12 +12,13 @@ Anyone who wishes to contribute to the continuation of the app will need to have
 
 ## Deployment
 
-For deployment to a live envierment, this App is recomended for mobile devies such as Android or Ios based systems. We recomment that you have one of or both playstore/app store licences. 
+For deployment to a live environment, this app is recommended for mobile devies such as Android or iOS systems. We recommend that you have one or both Google Playstore/Apple App Store licences. 
 
 ## Built With
 
-* [Flutter](https://flutter.dev/) - The app development environment used
+* [Flutter](https://flutter.dev/) - The software development kit used
 * [Dart](https://maven.apache.org/) - The main programming language used
+* [Android Studio](https://developer.android.com/studio) - The app development environment used
 
 ## Contributing
 
