@@ -2,6 +2,8 @@
 
 Project Sekhmet is creating "My Olakino", a mobile health application able to store and present health related information including calorie and exercise logs. Our app gives recommendations for diet and exercise that fits the users goals.
 
+# _My Olakino - Version: 1.0_
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
