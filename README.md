@@ -10,24 +10,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 Anyone who wishes to contribute to the continuation of the app will need to have installed Android Studio or similar IDE that supports plugins, Flutter and Dart plugins.
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Deployment
 
 For deployment to a live envierment, this App is recomended for mobile devies such as Android or Ios based systems. We recomment that you have one of or both playstore/app store licences. 
