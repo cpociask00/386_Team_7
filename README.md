@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Anyone who wishes to contribute to the continuation of the app will need to have installed Android Studio or similar IDE that supports plugins, Flutter and Dart plugins.
+Anyone who wishes to contribute to the continuation of our app will need to have installed Android Studio or similar IDE that supports plugins, Flutter, and Dart plugins.
 
 ## Deployment
 
@@ -17,12 +17,12 @@ For deployment to a live environment, this app is recommended for mobile devies 
 ## Built With
 
 * [Flutter](https://flutter.dev/) - The software development kit used
-* [Dart](https://maven.apache.org/) - The main programming language used
+* [Dart](https://dart.dev/) - The main programming language used
 * [Android Studio](https://developer.android.com/studio) - The app development environment used
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/cpociask00/386_Team_7/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/cpociask00/386_Team_7/blob/main/CODE_OF_CONDUCT.md)for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
