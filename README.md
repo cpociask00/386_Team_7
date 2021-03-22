@@ -1,6 +1,6 @@
 # Project Sekhmet
 
-Project Sekhmet is creating "My Olakino", mobile health application able to store and present health related information including calorie and exercise logs. Our app gives recommendations for diet and exercise that fits the users goals.
+Project Sekhmet is creating "My Olakino", a mobile health application able to store and present health related information including calorie and exercise logs. Our app gives recommendations for diet and exercise that fits the users goals.
 
 ## Getting Started
 
@@ -30,12 +30,16 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Deployment
 
-TBD
+For deployment to a live envierment, this App is recomended for mobile devies such as Android or Ios based systems. We recomment that you have one of or both playstore/app store licences. 
 
 ## Built With
 
 * [Flutter](https://flutter.dev/) - The app development environment used
 * [Dart](https://maven.apache.org/) - The main programming language used
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -51,6 +55,10 @@ We use [GitHub](http://github.com/) for versioning.
 * **Jake Stuck** - *Developer*
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
