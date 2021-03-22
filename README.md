@@ -73,13 +73,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * **Carson Pociask** - Contributor -
 * **Kyle Mo** - Contributor -
-* **Ricardo McCruau** - Contributor -
+* **Ricardo McCruay** - Contributor -
 * **Jacob Stuck** - Contributor -
 * **Kaila Iglesias** - Contributor -
-* **Jonathan Gomez** - Contributor -
+* **Jonathan Gomez** - Contributor - [jgomezpr]
 
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -88,8 +86,4 @@ See also the list of [contributors](https://github.com/your/project/contributors
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+Shouout to flutter
