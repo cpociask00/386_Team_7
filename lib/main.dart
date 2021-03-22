@@ -2,11 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:table_calendar/table_calendar.dart';
 import 'HealthyRecipes.dart';
 import 'ExerciseList.dart';
 import 'HealthyRecipes.dart';
 import 'UserProfile.dart';
 import 'GameClass.dart';
+
 
 void main() {
   // This is the main function for the Olakino app
@@ -59,9 +61,11 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   TabController tabController;
+  final CalendarController controller = CalendarController();
 
   Timer clockUpdateTimer;
   DateTime time = DateTime.now();
@@ -122,6 +126,7 @@ class _MyHomePageState extends State<MyHomePage>
       return '${date.minute}';
   }
 
+
   @override
   // builds the view
   Widget build(BuildContext context) {
@@ -142,8 +147,14 @@ class _MyHomePageState extends State<MyHomePage>
               child: Text('$hour:$min',
                 style: TextStyle(fontSize: 40)),
             ),
+            Center (
+              child: TableCalendar(
+                calendarController: controller)
+            ),
+
           ],
       ),
+
 
       // This is the menu drawer
       drawer: Drawer(
@@ -244,6 +255,9 @@ class _MyHomePageState extends State<MyHomePage>
       )),
     );
   }
+
+
+
 }
 
 

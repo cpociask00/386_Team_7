@@ -205,21 +205,6 @@ class _ExercisesState extends State<ExerciseList> {
               })
         ],
       )),
-                  onTap: () {
-                    Navigator.pop(context);
-                    Navigator.push(context,MaterialPageRoute(builder: (context) => GameClass()));
-                  }
-              ),
-
-
-
-
-            ],
-
-          )
-      ),
-
-
     );
   }
 }
