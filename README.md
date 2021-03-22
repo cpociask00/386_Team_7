@@ -1,10 +1,10 @@
 # Project Sekhmet
 
-Project Sekhmet is creating a mobile health application
+Project Sekhmet is creating "My Olakino", mobile health application able to store and present health related information including calorie and exercise logs. Our app gives recommendations for diet and exercise that fits the users goals.
 
 ## Getting Started
 
-This application uses the Flutter plugin for Android Studio. 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
@@ -58,8 +58,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Android Studio]() - The IDE used to compile and run the application
-* [Flutter]() - The plugin used for Android Studio for developing mobile application for both Iphone and Android systems
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
@@ -71,13 +72,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Carson Pociask** - Contributor -
-* **Kyle Mo** - Contributor -
-* **Ricardo McCruay** - Contributor -
-* **Jacob Stuck** - Contributor -
-* **Kaila Iglesias** - Contributor -
-* **Jonathan Gomez** - Contributor - [jgomezpr]
-
+* **Carson Pociask** - *Developer*
+* **Ricardo McCrary** - *Developer*
+* **Kaila Iglesias** - *Developer*
+* **Kyle Mo** - *Developer*
+* **Jonathan Gomez** - *Developer*
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -86,4 +85,5 @@ See also the list of [contributors](https://github.com/your/project/contributors
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-Shouout to flutter
+
+The Hawaiian Islands is one of the best places on this planet. We drew inspiration for the style and functionality of the app from the lifestyle that the islands host, motivated yet simple and relaxed.
