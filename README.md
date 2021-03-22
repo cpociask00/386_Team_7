@@ -8,12 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
 Anyone who wishes to contribute to the continuation of the app will need to have installed Android Studio or similar IDE that supports plugins, Flutter and Dart plugins.
-
-
-
 
 ### Installing
 
@@ -33,35 +28,14 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Flutter](https://flutter.dev/) - The app development environment used
+* [Dart](https://maven.apache.org/) - The main programming language used
 
 ## Contributing
 
@@ -69,7 +43,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [GitHub](http://github.com/) for versioning.
 
 ## Authors
 
@@ -78,6 +52,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Kaila Iglesias** - *Developer*
 * **Kyle Mo** - *Developer*
 * **Jonathan Gomez** - *Developer*
+* **Jake Stuck** - *Developer*
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
