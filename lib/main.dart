@@ -1,12 +1,14 @@
 import 'dart:async';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:table_calendar/table_calendar.dart';
+import 'package:olakino/About.dart';
 import 'HealthyRecipes.dart';
 import 'ExerciseList.dart';
 import 'HealthyRecipes.dart';
 import 'UserProfile.dart';
 import 'GameClass.dart';
+
 
 void main() {
   // This is the main function for the Olakino app
@@ -59,9 +61,11 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   TabController tabController;
+  final CalendarController controller = CalendarController();
 
   Timer clockUpdateTimer;
   DateTime time = DateTime.now();
@@ -122,6 +126,7 @@ class _MyHomePageState extends State<MyHomePage>
       return '${date.minute}';
   }
 
+
   @override
   // builds the view
   Widget build(BuildContext context) {
@@ -142,8 +147,14 @@ class _MyHomePageState extends State<MyHomePage>
               child: Text('$hour:$min',
                 style: TextStyle(fontSize: 40)),
             ),
+            Center (
+              child: TableCalendar(
+                calendarController: controller)
+            ),
+
           ],
       ),
+
 
       // This is the menu drawer
       drawer: Drawer(
@@ -239,11 +250,28 @@ class _MyHomePageState extends State<MyHomePage>
                 Navigator.pop(context);
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => GameClass()));
+              }),
+          ListTile(
+              leading: Text('About Us'),
+              trailing: Icon(Icons.android),
+              /*
+                 This function handles linking the button to the class which contains the
+                 page
+                */
+              onTap: () {
+                // this clears the page so it can be changed to another
+                Navigator.pop(context);
+                // this pushes the content of a particular page, in this case the Profile class
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => About()));
               })
         ],
       )),
     );
   }
+
+
+
 }
 
 
