@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:olakino/HomeScreen.dart';
 import 'package:olakino/UserProfile.dart';
 import 'package:olakino/HealthyRecipes.dart';
 import 'main.dart';
@@ -45,7 +46,7 @@ class _GameState extends State<GameClass> {
 
                   onTap: () {
                     Navigator.pop(context);
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage()));
                   }
               ),
               ListTile(

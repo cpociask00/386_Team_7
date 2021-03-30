@@ -4,6 +4,7 @@ import 'UserProfile.dart';
 import 'GameClass.dart';
 import 'main.dart';
 import 'About.dart';
+import 'HomeScreen.dart';
 
 class HealthyRecipes extends StatefulWidget{
   @override
@@ -45,7 +46,7 @@ class _RecipesState extends State<HealthyRecipes> {
 
                   onTap: () {
                     Navigator.pop(context);
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage()));
                   }
               ),
               ListTile(

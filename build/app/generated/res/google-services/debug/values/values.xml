@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">445032777434-q1ujjoidgbbn6vnng9044jemigkqmpr8.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">445032777434</string>
+    <string name="google_api_key" translatable="false">AIzaSyAwPm9Ju3hpA1RsQ-1CVOFyNdjRiW_6iC4</string>
+    <string name="google_app_id" translatable="false">1:445032777434:android:2f469694304dd899c207e3</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAwPm9Ju3hpA1RsQ-1CVOFyNdjRiW_6iC4</string>
+    <string name="google_storage_bucket" translatable="false">olakino-cs386.appspot.com</string>
+    <string name="project_id" translatable="false">olakino-cs386</string>
+</resources>

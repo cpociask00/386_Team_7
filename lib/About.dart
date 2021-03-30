@@ -4,6 +4,7 @@ import 'UserProfile.dart';
 import 'GameClass.dart';
 import 'main.dart';
 import 'HealthyRecipes.dart';
+import 'HomeScreen.dart';
 
 class About extends StatefulWidget{
   @override
@@ -47,7 +48,7 @@ class _AboutState extends State<About> {
                   onTap: () {
                     Navigator.pop(context);
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => MyApp()));
+                        MaterialPageRoute(builder: (context) => MyHomePage()));
                   }
               ),
               ListTile(
@@ -111,14 +112,14 @@ class _AboutState extends State<About> {
               ),
 
               ListTile(
-                leading: Text('About'),
-                trailing: Icon(Icons.android),
+                  leading: Text('About'),
+                  trailing: Icon(Icons.android),
 
-                onTap: () {
-                  Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (context) =>
-                  About()));
-                }
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>
+                        About()));
+                  }
 
               )
 

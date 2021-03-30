@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "445032777434",
+    "project_id": "olakino-cs386",
+    "storage_bucket": "olakino-cs386.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445032777434:android:2f469694304dd899c207e3",
+        "android_client_info": {
+          "package_name": "team7.cs386.olakino"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445032777434-q1ujjoidgbbn6vnng9044jemigkqmpr8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwPm9Ju3hpA1RsQ-1CVOFyNdjRiW_6iC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "445032777434-q1ujjoidgbbn6vnng9044jemigkqmpr8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

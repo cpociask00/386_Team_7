@@ -5,6 +5,7 @@ import 'HealthyRecipes.dart';
 import 'ExerciseList.dart';
 import 'GameClass.dart';
 import 'About.dart';
+import 'HomeScreen.dart';
 
 
 class Profile extends StatefulWidget{
@@ -47,7 +48,7 @@ class _ProfileState extends State<Profile> {
 
                   onTap: () {
                     Navigator.pop(context);
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage()));
                   }
               ),
 
@@ -67,19 +68,19 @@ class _ProfileState extends State<Profile> {
               ),
               // recipes
               ListTile(
-                leading: Text('Healthy Recipes'),
-                trailing: Icon(Icons.fastfood),
+                  leading: Text('Healthy Recipes'),
+                  trailing: Icon(Icons.fastfood),
 
-                /*
+                  /*
                This function handles linking the button to the class which contains
                the page
               */
-                onTap: () {
-                  Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => (HealthyRecipes())));
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => (HealthyRecipes())));
 
 
-              }
+                  }
               ),
 
               ListTile(

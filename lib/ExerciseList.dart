@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:io';
 import 'About.dart';
+import 'HomeScreen.dart';
 
 /// Basic enumeration for difficulty type, could be changed to open ended string
 enum Difficulty { easy, medium, hard }
@@ -64,8 +65,8 @@ class _ExercisesState extends State<ExerciseList> {
     setState(() {
       int parameterSeparation = 4; // # of parameters for each object
       for (int index = 0;
-          index < fileData.length;
-          index += parameterSeparation) {
+      index < fileData.length;
+      index += parameterSeparation) {
         tempExercise = new Exercise.init(fileData[index], Difficulty.easy,
             fileData[index + 1], fileData[index + 2], fileData[index + 3]);
         allExercises.add(tempExercise);
@@ -109,7 +110,7 @@ class _ExercisesState extends State<ExerciseList> {
       ),
       body: Center(
         child: Column(children: createExercises()
-            /*[
+          /*[
             Text(allExercises[1].name),
             Container(
               //child: allExercises[1].image,
@@ -117,108 +118,108 @@ class _ExercisesState extends State<ExerciseList> {
             Text(allExercises[1].description),
             Text(allExercises[1].direction),
             ],*/
-            ),
+        ),
       ),
       drawer: Drawer(
           child: ListView(
-        padding: EdgeInsets.zero,
-        children: <Widget>[
-          DrawerHeader(
-            child: Text(
-              'Olakino',
-              style: TextStyle(fontSize: 20),
-            ),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: NetworkImage(
-                        'https://i.ytimg.com/vi/bKrym5zuOag/maxresdefault.jpg'),
-                    fit: BoxFit.cover)),
-          ),
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                child: Text(
+                  'Olakino',
+                  style: TextStyle(fontSize: 20),
+                ),
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            'https://i.ytimg.com/vi/bKrym5zuOag/maxresdefault.jpg'),
+                        fit: BoxFit.cover)),
+              ),
 
-          /*
+              /*
               Profile ListTile
             */
-          ListTile(
-              leading: Text('Home'),
-              trailing: Icon(Icons.home),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => MyApp()));
-              }),
-          ListTile(
-              leading: Text('User Profile'),
-              trailing: Icon(Icons.account_circle),
-              /*
+              ListTile(
+                  leading: Text('Home'),
+                  trailing: Icon(Icons.home),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => MyHomePage()));
+                  }),
+              ListTile(
+                  leading: Text('User Profile'),
+                  trailing: Icon(Icons.account_circle),
+                  /*
                  This function handles linking the button to the class which contains the
                  page
                 */
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Profile()));
-              }),
-          // recipes
-          ListTile(
-              leading: Text('Healthy Recipes'),
-              trailing: Icon(Icons.fastfood),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Profile()));
+                  }),
+              // recipes
+              ListTile(
+                  leading: Text('Healthy Recipes'),
+                  trailing: Icon(Icons.fastfood),
 
-              /*
+                  /*
                This function handles linking the button to the class which contains
                the page
               */
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => (HealthyRecipes())));
-              }),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => (HealthyRecipes())));
+                  }),
 
-          ListTile(
-            leading: Text('Exercises'),
-            trailing: Icon(Icons.fitness_center),
-            /*
+              ListTile(
+                leading: Text('Exercises'),
+                trailing: Icon(Icons.fitness_center),
+                /*
                This function handles linking the button to the class which contains
                the page
               */
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ExerciseList()));
-            },
-          ),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ExerciseList()));
+                },
+              ),
 
-          ListTile(
-              leading: Text('Exercise RPG'),
-              trailing: Icon(Icons.videogame_asset),
+              ListTile(
+                  leading: Text('Exercise RPG'),
+                  trailing: Icon(Icons.videogame_asset),
 
-              /*
+                  /*
                 This function handles linking the button to the class which
                  contains the page
               */
 
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => GameClass()));
-              }),
-          ListTile(
-              leading: Text('About Us'),
-              trailing: Icon(Icons.android),
-              /*
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => GameClass()));
+                  }),
+              ListTile(
+                  leading: Text('About Us'),
+                  trailing: Icon(Icons.android),
+                  /*
                  This function handles linking the button to the class which contains the
                  page
                 */
-              onTap: () {
-                // this clears the page so it can be changed to another
-                Navigator.pop(context);
-                // this pushes the content of a particular page, in this case the Profile class
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => About()));
-              })
-        ],
-      )),
-    );n
+                  onTap: () {
+                    // this clears the page so it can be changed to another
+                    Navigator.pop(context);
+                    // this pushes the content of a particular page, in this case the Profile class
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => About()));
+                  })
+            ],
+          )),
+    );
   }
 }
