@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:olakino/UserProfile.dart';
-import 'package:olakino/HealthyRecipes.dart';
 import 'main.dart';
-import 'package:olakino/ExerciseList.dart';
-import 'About.dart';
 
 class GameClass extends StatefulWidget{
   @override

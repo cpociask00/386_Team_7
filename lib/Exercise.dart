@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
-import 'ExerciseList.dart';
 
 /// Basic enumeration for difficulty type, could be changed to open ended string
 enum Difficulty { easy, medium, hard }

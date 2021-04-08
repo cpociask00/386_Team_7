@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'ExerciseList.dart';
-import 'UserProfile.dart';
-import 'GameClass.dart';
 import 'main.dart';
-import 'About.dart';
 
 class HealthyRecipes extends StatefulWidget{
   @override
