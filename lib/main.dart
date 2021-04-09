@@ -8,6 +8,7 @@ import 'UserProfile.dart';
 import 'GameClass.dart';
 import 'Exercise.dart';
 import 'HomeScreen.dart';
+import 'Diary.dart';
 
 void main() {
   // This is the main function for the Olakino app
@@ -51,6 +52,15 @@ class GlobalDrawer {
                     MaterialPageRoute(builder: (context) => Profile()));
               }),
           ListTile(
+            leading: Text('Diary'),
+            trailing: Icon(Icons.book),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Diary()));
+            },
+          ),
+          ListTile(
             leading: Text('Healthy Recipes'),
             trailing: Icon(Icons.fastfood),
             onTap: () {
@@ -86,6 +96,7 @@ class GlobalDrawer {
                   context, MaterialPageRoute(builder: (context) => About()));
             },
           ),
+
         ],
       ),
     );
