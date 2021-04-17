@@ -9,6 +9,7 @@ import 'GameClass.dart';
 import 'Exercise.dart';
 import 'HomeScreen.dart';
 import 'Diary.dart';
+import 'ExerciseCreator.dart';
 
 void main() {
   // This is the main function for the Olakino app
@@ -17,7 +18,23 @@ void main() {
   runApp(MyApp());
 }
 
-/// The shared drawer/sidebar with out page links
+class GlobalRoutines {
+  static List<ExerciseRoutine> allRoutines;
+  static getRoutines() {
+    if (allRoutines == null)
+      allRoutines = new List<ExerciseRoutine>();
+    return allRoutines;
+  }
+  static addRoutine(ExerciseRoutine routine) {
+    if (allRoutines == null)
+      allRoutines = new List<ExerciseRoutine>();
+    allRoutines.add(routine);
+  }
+  static removeRoutine(ExerciseRoutine routine) {
+    allRoutines.remove(routine);
+  }
+}
+/// The shared drawer/sidebar with our page links
 class GlobalDrawer {
   static getDrawer(BuildContext context) {
     return Drawer(
@@ -94,6 +111,15 @@ class GlobalDrawer {
               Navigator.pop(context);
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => About()));
+            },
+          ),
+          ListTile(
+            leading: Text('Creator'),
+            trailing: Icon(Icons.android),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => ExerciseCreator()));
             },
           ),
 

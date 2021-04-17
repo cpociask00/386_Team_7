@@ -75,6 +75,7 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   // builds the view
   Widget build(BuildContext context) {
+
     // scaffold generates the UI
     return new Scaffold(
       // App bar is the top most bar of the app

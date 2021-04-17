@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
 import 'Exercise.dart';
+import 'ExerciseCreator.dart';
 
 class ExerciseList extends StatefulWidget {
   @override
@@ -8,9 +9,14 @@ class ExerciseList extends StatefulWidget {
 }
 
 class _ExercisesState extends State<ExerciseList> {
-  @override
+  ExerciseRoutine createdRoutine = new ExerciseRoutine();
+  double _currentSetValue = 3;
+  double _currentRepValue = 8;
+  int _setVal = 3;
+  int _repVal = 8;
+  String _routineName = '';
 
-  /// Creates an array of Containers with the styles below using the exercises created from fetchFileData()
+  /// Creates an array of Containers with the styles below using the exercises created from GlobalExercises
   displayExercises(List<Exercise> allExercises) {
     List<Container> containers = new List();
     for (int index = 0; index < allExercises.length; index++) {
@@ -20,12 +26,7 @@ class _ExercisesState extends State<ExerciseList> {
           decoration: BoxDecoration(
               border: Border.all(color: Colors.black),
               color: Colors.white,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(10),
-                topRight: Radius.circular(10),
-                bottomLeft: Radius.circular(10),
-                bottomRight: Radius.circular(10),
-              ),
+              borderRadius: BorderRadius.all(Radius.circular(10)),
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey,
@@ -54,41 +55,73 @@ class _ExercisesState extends State<ExerciseList> {
   }
 
   /// Creates the popup for each exercise in the middle of displayExercises()
-  createExercisePopup(BuildContext context, Exercise exercise) {
-    return showDialog(
-        context: context,
-        builder: (context) {
+  createExercisePopup(BuildContext context, Exercise exercise) async {
+    return await showDialog(
+      context: context,
+      builder: (context) {
+        return StatefulBuilder(builder: (context, setState) {
           return AlertDialog(
-              title: Text(exercise.name),
-              content: Column(children: <Widget>[
-                exercise.image, //Image
-                Padding(
-                  padding: const EdgeInsets.only(top: 15),
-                  child: Text(exercise.description, style: TextStyle()),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 15),
-                  child: Text(exercise.direction),
-                ),
-              ]),
-              actions: <Widget>[
-                MaterialButton(
-                    elevation: 1000,
-                    child: Text('Favorite'),
-                    onPressed: () {
-                      Navigator.of(context).pop(context);
-                    }),
-                MaterialButton(
-                    elevation: 1000,
-                    child: Text('Add to Diary'),
-                    onPressed: () {
-                      Navigator.of(context).pop(context);
-                    }),
-              ]);
+            title: Text(exercise.name),
+            content: SingleChildScrollView(
+              child: Column(
+                children: [
+                  exercise.image, //Image
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15),
+                    child: Text(exercise.description, style: TextStyle()),
+                  ),
+                  Text('Sets: $_currentSetValue'),
+                  Slider(
+                    min: 1,
+                    max: 5,
+                    divisions: 4,
+                    value: _currentSetValue,
+                    label: _currentSetValue.toString(),
+                    onChanged: (double value) {
+                      setState(() {
+                        _currentSetValue = value;
+                        _setVal = _currentSetValue.toInt();
+                      });
+                    },
+                  ),
+                  Text('Repetitions: $_currentRepValue'),
+                  Slider(
+                    min: 1,
+                    max: 20,
+                    divisions: 19,
+                    value: _currentRepValue,
+                    label: _currentRepValue.toString(),
+                    onChanged: (double value) {
+                      setState(() {
+                        _currentRepValue = value;
+                        _repVal = _currentRepValue.toInt();
+                      });
+                    },
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15),
+                    child: Text(exercise.direction),
+                  ),
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              MaterialButton(
+                  elevation: 5.0,
+                  child: Text('Add'),
+                  onPressed: () {
+                    createdRoutine.addExercise(
+                        new ExerciseInRoutine(exercise, _setVal, _repVal));
+                    Navigator.of(context).pop(context);
+                  }),
+            ],
+          );
         });
+      },
+    );
   }
 
-
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -97,10 +130,54 @@ class _ExercisesState extends State<ExerciseList> {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
-              children: displayExercises(GlobalExercises.allExercises)),
+            children: [
+              RaisedButton(
+                  child: Text('Create Workout'),
+                  onPressed: () {
+                    if (createdRoutine.exercises.length < 1)
+                      return;
+                    nameThisWorkoutAlert(context);
+                  }),
+              Column(children: displayExercises(GlobalExercises.allExercises)),
+            ],
+          ),
         ),
       ),
       drawer: GlobalDrawer.getDrawer(context),
     );
+  }
+
+  /// The alert dialog box that appears when user click Create Workout button
+  nameThisWorkoutAlert(BuildContext context) {
+    return showDialog(
+        context: context,
+        builder: (context) {
+          return StatefulBuilder(builder: (context, setState) {
+            return AlertDialog(
+              title: Text('Name This Workout'),
+              content: Container(child: TextField(
+                onChanged: (newText) { _routineName = newText; },
+                decoration: InputDecoration(),)),
+              actions: [
+                MaterialButton(
+                  child: Text('Create'),
+                  onPressed: () {
+                    if (_routineName == '')
+                      return;
+                    createdRoutine.setName(_routineName);
+                    GlobalRoutines.addRoutine(createdRoutine);
+                    Navigator.of(context).pop(context);
+                  },
+                ),
+                MaterialButton(
+                  child: Text('Cancel'),
+                  onPressed: () {
+                    Navigator.of(context).pop(context);
+                  },
+                ),
+              ],
+            );
+          });
+        });
   }
 }
