@@ -34,3 +34,35 @@ class Exercise {
     direction = dir;
   }
 }
+
+class ExerciseRoutine {
+  String name;
+  DateTime savedDate;
+  List<ExerciseInRoutine> exercises;
+
+  ExerciseRoutine() {
+    name = '';
+    savedDate = null;
+    exercises = new List<ExerciseInRoutine>();
+  }
+
+  addExercise(ExerciseInRoutine ex) {
+    exercises.add(ex);
+  }
+
+  setName(String name) {
+    this.name = name;
+  }
+}
+
+class ExerciseInRoutine {
+  Exercise exercise;
+  int sets;
+  int reps;
+
+  ExerciseInRoutine(Exercise exercise, int sets, int reps) {
+    this.exercise = exercise;
+    this.sets = sets;
+    this.reps = reps;
+  }
+}
