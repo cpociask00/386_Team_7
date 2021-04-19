@@ -142,7 +142,6 @@ class GlobalExercises {
   static List<Exercise> allExercises;
   static List<String> _fileData;
 
-  // reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee fuck async
   static int fileLen = 3;
 
 
