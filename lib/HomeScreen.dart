@@ -3,6 +3,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'main.dart';
+// Amplify Flutter Packages
+import 'package:amplify_flutter/amplify.dart';
+import 'package:amplify_api/amplify_api.dart';
+import 'package:amplify_datastore/amplify_datastore.dart';
+
+// Generated in previous step
+import 'models/ModelProvider.dart';
+import 'amplifyconfiguration.dart';
+
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -32,10 +41,14 @@ class _MyHomePageState extends State<MyHomePage>
   DateTime currentDate;
   String date;
   String hour, min;
+  bool _amplifyConfigured = false;
+
+
 
   @override
   void initState() {
     super.initState();
+    _configureAmplify();
     tabController = new TabController(length: 4, vsync: this);
     currentDate = DateTime(time.year, time.month, time.day);
     date = '${getMonth(currentDate)} , ${time.day}';
@@ -44,11 +57,25 @@ class _MyHomePageState extends State<MyHomePage>
     clockUpdateTimer = Timer.periodic(Duration(seconds: 1), (timer) {
       updateTimer();
     });
-    //TODO: Implement landing page
+  }
+  void _configureAmplify() async {
+
+    // Amplify.addPlugin(AmplifyAPI()); // UNCOMMENT this line once backend is deployed
+    Amplify.addPlugin(AmplifyDataStore(modelProvider: ModelProvider.instance));
+
+    // Once Plugins are added, configure Amplify
+    await Amplify.configure(amplifyconfig);
+    try {
+      setState(() {
+        _amplifyConfigured = true;
+      });
+    } catch (e) {
+      print(e);
+    }
   }
 
   /// Updates the current clock time
-  void updateTimer() {
+  Future<void> updateTimer() async {
     time = DateTime.now();
     setState(() {
       currentDate = DateTime(time.year, time.month, time.day);
@@ -56,6 +83,10 @@ class _MyHomePageState extends State<MyHomePage>
       hour = '${time.hour}';
       min = reformatMinute(time);
     });
+    final item = User(
+        first_name: "balls",
+        last_name: "poop");
+    await Amplify.DataStore.save(item);
   }
 
   /// Returns a string with the correct month name using input date

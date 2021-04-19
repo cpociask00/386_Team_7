@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-myolakino-staging-220904-authRole",
+      "UnauthRoleArn": "arn:aws:iam::980678062761:role/amplify-myolakino-staging-220904-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::980678062761:role/amplify-myolakino-staging-220904-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-myolakino-staging-220904-deployment",
+      "UnauthRoleName": "amplify-myolakino-staging-220904-unauthRole",
+      "StackName": "amplify-myolakino-staging-220904",
+      "StackId": "arn:aws:cloudformation:us-west-2:980678062761:stack/amplify-myolakino-staging-220904/b096e300-a092-11eb-b306-06fe2700f8ef",
+      "AmplifyAppId": "d31z06ufu1tckr"
+    },
+    "categories": {
+      "auth": {
+        "MyOlakino": {}
+      }
+    }
+  }
+}

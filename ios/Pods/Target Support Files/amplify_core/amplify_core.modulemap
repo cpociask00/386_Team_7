@@ -1,0 +1,6 @@
+framework module amplify_core {
+  umbrella header "amplify_core-umbrella.h"
+
+  export *
+  module * { export * }
+}

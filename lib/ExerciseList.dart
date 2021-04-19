@@ -121,7 +121,12 @@ class _ExercisesState extends State<ExerciseList> {
     );
   }
 
+<<<<<<< Updated upstream
   @override
+=======
+
+
+>>>>>>> Stashed changes
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

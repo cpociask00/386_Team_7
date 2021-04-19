@@ -1,0 +1,5 @@
+{
+    "tableName": "App_User",
+    "partitionKeyName": "first_name",
+    "partitionKeyType": "S"
+}

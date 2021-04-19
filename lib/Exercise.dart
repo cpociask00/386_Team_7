@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 /// Basic enumeration for difficulty type, could be changed to open ended string
@@ -33,8 +34,21 @@ class Exercise {
     description = desc;
     direction = dir;
   }
+
+}
+class ExerciseRoutine {
+  String name;
+  DateTime savedDate;
+  List<ExerciseInRoutine> exercises;
+
+  ExerciseRoutine() {
+    name = '';
+    savedDate = null;
+    exercises = new List<ExerciseInRoutine>();
+  }
 }
 
+<<<<<<< Updated upstream
 class ExerciseRoutine {
   String name;
   DateTime savedDate;
@@ -55,6 +69,8 @@ class ExerciseRoutine {
   }
 }
 
+=======
+>>>>>>> Stashed changes
 class ExerciseInRoutine {
   Exercise exercise;
   int sets;
@@ -65,4 +81,8 @@ class ExerciseInRoutine {
     this.sets = sets;
     this.reps = reps;
   }
+<<<<<<< Updated upstream
 }
+=======
+
+>>>>>>> Stashed changes

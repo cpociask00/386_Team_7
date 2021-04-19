@@ -11,10 +11,16 @@ import 'HomeScreen.dart';
 import 'Diary.dart';
 import 'ExerciseCreator.dart';
 
+
 void main() {
   // This is the main function for the Olakino app
   WidgetsFlutterBinding.ensureInitialized();
-  GlobalExercises.getExercises(); // Since this function is async it must be called before so the data is ready
+  // Since this function is async it must be called before so the data is ready
+  GlobalExercises.getExercises();
+
+
+
+
   runApp(MyApp());
 }
 
@@ -36,6 +42,9 @@ class GlobalRoutines {
 }
 /// The shared drawer/sidebar with our page links
 class GlobalDrawer {
+
+  bool _amplifyConfigured = false;
+
   static getDrawer(BuildContext context) {
     return Drawer(
       child: ListView(
@@ -131,24 +140,42 @@ class GlobalDrawer {
 /// The shared exercises user for display across the app
 class GlobalExercises {
   static List<Exercise> allExercises;
+  static List<String> _fileData;
 
-  static getExercises() async {
-    if (allExercises == null) {
+  // reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee fuck async
+  static int fileLen = 3;
+
+
+     /*
+       Populates exercises list
+      */
+  static getExercises() async
+   {
+    int index;
+    // # of parameters for each object
+    int parameterSeparation = 4;
+
+    if (allExercises == null)
+     {
       allExercises = new List<Exercise>();
-      List<String> _fileData;
+
       Exercise _tempExercise;
       String _textContent = await rootBundle.loadString('textFiles/exercises');
       _fileData = _textContent.split('; ');
+      fileLen = _fileData.length;
 
-      int parameterSeparation = 4; // # of parameters for each object
-      for (int index = 0; index < _fileData.length; index += parameterSeparation) {
-        _tempExercise = new Exercise.init(_fileData[index], Difficulty.easy,
+      for (index = 0; index < fileLen; index += parameterSeparation)
+         {
+           _tempExercise = new Exercise.init(_fileData[index], Difficulty.easy,
             _fileData[index + 1], _fileData[index + 2], _fileData[index + 3]);
-        allExercises.add(_tempExercise);
-      }
+           allExercises.add(_tempExercise);
+         }
+
     }
+
     return allExercises;
-  }
+   }
+
 }
 
 class MyApp extends StatelessWidget {

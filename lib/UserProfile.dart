@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'main.dart';
+
 
 
 class Profile extends StatefulWidget{
@@ -19,6 +22,11 @@ class _ProfileState extends State<Profile> {
   var weight = ["155 pounds", "600 pounds", "220 pounds", "135 pounds", "120 pounds"];
   var location = ["Flagstaff, AZ"];
   var userlvlstr = [" level 1"];
+
+  establishConnection()
+     {
+
+     }
 
 
   @override
@@ -163,7 +171,6 @@ class _ProfileState extends State<Profile> {
               SizedBox(
                 height: 50,
               ),
-
             ],
           ),
         )

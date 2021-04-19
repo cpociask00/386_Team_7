@@ -1,0 +1,6 @@
+framework module amplify_flutter {
+  umbrella header "amplify_flutter-umbrella.h"
+
+  export *
+  module * { export * }
+}

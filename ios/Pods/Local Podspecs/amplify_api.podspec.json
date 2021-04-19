@@ -1,0 +1,38 @@
+{
+  "name": "amplify_api",
+  "version": "0.0.1",
+  "summary": "The API module for Amplify Flutter.",
+  "description": "The API module for Amplify Flutter.",
+  "homepage": "https://github.com/aws-amplify/amplify-flutter",
+  "license": "Apache License, Version 2.0",
+  "authors": {
+    "Amazon Web Services": "amazonwebservices"
+  },
+  "source": {
+    "git": "https://github.com/aws-amplify/amplify-flutter.git"
+  },
+  "source_files": "Classes/**/*",
+  "dependencies": {
+    "Flutter": [
+
+    ],
+    "Amplify": [
+
+    ],
+    "AmplifyPlugins/AWSAPIPlugin": [
+
+    ],
+    "amplify_core": [
+
+    ]
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES",
+    "VALID_ARCHS[sdk=iphonesimulator*]": "x86_64"
+  },
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
+}

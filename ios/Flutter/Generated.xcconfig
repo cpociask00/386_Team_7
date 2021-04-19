@@ -1,15 +1,13 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=/Users/cpociask/flutterDev/flutter
-FLUTTER_APPLICATION_PATH=/Users/cpociask/AndroidStudioProjects/3_18_21
-FLUTTER_TARGET=/Users/cpociask/AndroidStudioProjects/3_18_21/lib/main.dart
+FLUTTER_ROOT=/Users/jakestuck/flutter
+FLUTTER_APPLICATION_PATH=/Users/jakestuck/StudioProjects/386_Team_7
+FLUTTER_TARGET=/Users/jakestuck/StudioProjects/386_Team_7/lib/main.dart
 FLUTTER_BUILD_DIR=build
 SYMROOT=${SOURCE_ROOT}/../build/ios
-OTHER_LDFLAGS=$(inherited) -framework Flutter
-FLUTTER_FRAMEWORK_DIR=/Users/cpociask/flutterDev/flutter/bin/cache/artifacts/engine/ios
 FLUTTER_BUILD_NAME=1.0.0
 FLUTTER_BUILD_NUMBER=1
 DART_DEFINES=flutter.inspector.structuredErrors%3Dtrue
 DART_OBFUSCATION=false
 TRACK_WIDGET_CREATION=true
 TREE_SHAKE_ICONS=false
-PACKAGE_CONFIG=.packages
+PACKAGE_CONFIG=/Users/jakestuck/StudioProjects/386_Team_7/.dart_tool/package_config.json
