@@ -12,6 +12,7 @@ class Exercise {
   String name;
   Difficulty difficulty;
   Image image;
+  String imageurl;
   var bodyAreas = new List();
   int bodyAreaCount;
   String description;
@@ -27,6 +28,7 @@ class Exercise {
       String dir) {
     this.name = name;
     difficulty = difficulty;
+    imageurl = imgUrl;
     image = new Image(
       image: AssetImage(imgUrl),
     );
@@ -48,6 +50,10 @@ class ExerciseRoutine {
 
   addExercise(ExerciseInRoutine ex) {
     exercises.add(ex);
+  }
+
+  removeExercise(ExerciseInRoutine ex) {
+    exercises.remove(ex);
   }
 
   setName(String name) {
