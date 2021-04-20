@@ -38,19 +38,7 @@ class Exercise {
   }
 
 }
-class ExerciseRoutine {
-  String name;
-  DateTime savedDate;
-  List<ExerciseInRoutine> exercises;
 
-  ExerciseRoutine() {
-    name = '';
-    savedDate = null;
-    exercises = new List<ExerciseInRoutine>();
-  }
-}
-
-<<<<<<< Updated upstream
 class ExerciseRoutine {
   String name;
   DateTime savedDate;
@@ -75,8 +63,6 @@ class ExerciseRoutine {
   }
 }
 
-=======
->>>>>>> Stashed changes
 class ExerciseInRoutine {
   Exercise exercise;
   int sets;
@@ -87,8 +73,4 @@ class ExerciseInRoutine {
     this.sets = sets;
     this.reps = reps;
   }
-<<<<<<< Updated upstream
 }
-=======
-
->>>>>>> Stashed changes
