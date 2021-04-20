@@ -101,7 +101,7 @@ class GlobalDrawer {
             onTap: () {
               Navigator.pop(context);
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ExerciseList()));
+                  MaterialPageRoute(builder: (context) => ExerciseCreator()));
             },
           ),
           ListTile(
@@ -122,16 +122,6 @@ class GlobalDrawer {
                   context, MaterialPageRoute(builder: (context) => About()));
             },
           ),
-          ListTile(
-            leading: Text('Creator'),
-            trailing: Icon(Icons.android),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => ExerciseCreator()));
-            },
-          ),
-
         ],
       ),
     );
