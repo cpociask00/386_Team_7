@@ -69,14 +69,37 @@ class _ExercisesCState extends State<ExerciseCreator> {
     for (int index = 0; index < exercises.length; index++) {
       containers.add(new Container(
         child: Column(
-          children: [
-            Text(exercises[index].exercise.name),
-            Text(exercises[index].sets.toString()),
-            Text(exercises[index].reps.toString()),
-            exercises[index].exercise.image,
-          ],
+            children: [
+              Align(alignment: Alignment.centerLeft,
+                  child: Text(exercises[index].exercise.name,
+                      style: TextStyle(fontSize: 30)),
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Image.asset(
+                  exercises[index].exercise.imageurl,
+                  width: 100,
+                  height: 100,
+                ),
+              ),
+              Align(alignment: Alignment.centerLeft,
+                child: Text('Sets: ' + exercises[index].sets.toString(), style: TextStyle(fontSize: 20)),
+              ),
+              Align(alignment: Alignment.centerLeft,
+                  child: Text('Repetitions: ' + exercises[index].reps.toString(), style: TextStyle(fontSize: 20))),
+              DecoratedBox(
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(width: 25, color: Colors.lightBlue),
+                  ),
+                  color: Colors.black,
+                ),
+                // child: ...
+              )
+            ],
+          ),
         ),
-      ));
+      );
     }
     return containers;
   }
@@ -87,7 +110,7 @@ class _ExercisesCState extends State<ExerciseCreator> {
       builder: (context) {
         return StatefulBuilder(builder: (context, setState) {
           return AlertDialog(
-            title: Text(routine.name),
+            title: Text(routine.name, style: TextStyle(fontSize: 45)),
             content: SingleChildScrollView(
               child: Column(children: displayEachExerciseInRoutine(routine)),
             ),
@@ -134,7 +157,7 @@ class _ExercisesCState extends State<ExerciseCreator> {
                 alignment: Alignment.centerLeft,
                 child: Container(
                   child: Text(
-                    "My Workouts",
+                    "My Workouts:",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 35,
