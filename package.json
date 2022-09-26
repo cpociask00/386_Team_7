@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@aws-amplify/datastore": "^2.9.16",
+    "@aws-amplify/datastore": "^2.10.1",
     "aws-amplify": "^3.3.27"
   }
 }
